@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="custom_thanks_layout" name="thanks">
+            <t t-call="web.frontend_layout">
+
+                <head>
+                    <meta charset="UTF-8"> </meta>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
+                    <title>Survey Form</title>
+                </head>
+
+                <body>
+                    <div style="height: 700px;" class="registration">
+
+                        <img style="max-width: 250px; margin-inline: 75px; margin-top: 4px; position: static;"
+                             src="/hayyak_survey/static/src/img/logo1-removebg-preview.png" alt="Logo"> </img>
+                        <img style="height: 43px; margin-inline: -9px; width: 429px;"
+                             src="/hayyak_survey/static/src/img/img.png"> </img>
+                        <header style="margin-top: 88px; color: #7f1313;">
+                            <h1 style="font-size: 25px;" id="title">HELP US IMPROVE</h1>
+                            <p style="margin-top: -1px; margin-inline: -58px;color: #7f1313;"
+                               id="description">Thank you for Your feedback !
+                                <hr style="margin-top: -161px; color: #000;"> </hr>
+                                 <p style="margin-top: 155px; margin-inline: -165px;color: #7f1313;"
+                               id="description"> شكرًا لكم</p>
+                            </p>
+
+                        </header>
+
+                        <i class="gg-check-o"> </i>
+
+                    </div>
+                </body>
+            </t>
+        </template>
+    </data>
+</odoo>

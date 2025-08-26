@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="custom_welcome_layout" name="welcome">
+            <t t-call="web.frontend_layout">
+                <head>
+                    <meta charset="UTF-8"></meta>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+                    <title>Survey Form</title>
+                </head>
+                <body>
+                    <div style="margin-top: 33px; padding-top: 10px;" class="registration">
+                        <img style="max-width: 145px;margin-inline:118px; margin-top: -14px;position: inherit;"
+                             src="/hayyak_survey/static/src/img/logo1.jpg" alt="Logo"></img>
+                        <header>
+                            <h1 style="font-size: 25px;" id="title">Customer Feedback</h1>
+                            <p style="padding: 42px; text-align: center;" id="description">Greetings Valued Guest,
+                                <br></br>
+                                Thank you for giving us the chance to serve your assistance in completing this e-survey
+                                is greatly appreciated.Your honest feedback will help us improve.
+                            </p>
+                            <t>
+                                Welcome to the
+                                <strong>
+                                    <span t-esc="name"/>
+                                </strong>
+                            </t>
+                        </header>
+                        <form style="height: 189px;" id="survey-form">
+                            <a t-attf-href="/survey_form" class="button">Start</a>
+                        </form>
+                    </div>
+                </body>
+            </t>
+        </template>
+    </data>
+</odoo>

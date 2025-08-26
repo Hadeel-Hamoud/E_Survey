@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- List View -->
+        <record id="hayyak_survey_list" model="ir.ui.view">
+            <field name="name">hayyak.survey.list</field>
+            <field name="model">hayyak.survey</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="rating1"/>
+                    <field name="rating2"/>
+                    <field name="rating3"/>
+                    <field name="dropdown"/>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="mobile"/>
+                    <field name="flight"/>
+                    <field name="text_area"/>
+                    <field name="create_date" string='Submission Date'/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- pivot View -->
+        <record id="hayyak_survey_pivot" model="ir.ui.view">
+            <field name="name">hayyak.survey.pivot</field>
+            <field name="model">hayyak.survey</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="rating1"/>
+                    <field name="rating2"/>
+                    <field name="rating3"/>
+                    <field name="dropdown"/>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="mobile"/>
+                    <field name="flight"/>
+                    <field name="text_area"/>
+                </pivot>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="hayyak_survey_form" model="ir.ui.view">
+            <field name="name">hayyak.survey.form</field>
+            <field name="model">hayyak.survey</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="rating1"/>
+                        <field name="rating2"/>
+                        <field name="rating3"/>
+                        <field name="dropdown"/>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="mobile"/>
+                        <field name="flight"/>
+                        <field name="text_area"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Graph View -->
+        <record id="hayyak_survey_graph" model="ir.ui.view">
+            <field name="name">hayyak.survey.graph</field>
+            <field name="model">hayyak.survey</field>
+            <field name="arch" type="xml">
+                <graph string="Hayyak Survey Graph" type="bar">
+                    <field name="rating1"/>
+                    <field name="rating2"/>
+                    <field name="rating3"/>
+                    <field name="dropdown"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_hayyak_survey" model="ir.actions.act_window">
+            <field name="name">E-Survey</field>
+            <field name="res_model">hayyak.survey</field>
+            <field name="view_mode">tree,form,graph,pivot</field>
+        </record>
+
+        <!--menu item-->
+        <menuitem id="menu_hayyak_survey" name="E-Survey" action="action_hayyak_survey"/>
+
+
+    </data>
+</odoo>

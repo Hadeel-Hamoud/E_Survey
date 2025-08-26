@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_frontend_survey" inherit_id="web.assets_frontend" name="zzz">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" href="hayyak_survey/static/src/css/style.css"/>
+                <link rel="stylesheet" href="hayyak_survey/static/src/css/style1.css"/>
+                <link rel="stylesheet" href="hayyak_survey/static/src/css/stylele.css"/>
+                <link rel="stylesheet" href="hayyak_survey/static/src/js/script1.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="custom_survey_layout" name="survey">
+            <t t-call="web.frontend_layout">
+
+                <head>
+                    <meta charset="UTF-8"></meta>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+                    <title>Survey Form</title>
+                </head>
+
+                <div style="height: 1949px;" class="registration">
+                    <img style="  max-width: 426px; margin-inline: -9px; margin-top: 4px; position: static;"
+                         src="/hayyak_survey/static/src/img/WhatsApp Image 2023-09-18 at 10.29.53 AM.png"
+                         alt="Logo"></img>
+
+                    <img style="height: 43px; margin-inline: -9px; width: 429px;"
+                         src="/hayyak_survey/static/src/img/img.png"></img>
+
+                    <hr style="margin-top: 4px; margin-inline: 377px; color: #000; margin-left: -9px;"></hr>
+
+
+                    <form role="form" action="/survey_submitted" id="survey-form" method="POST">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                        <br></br>
+                        <br></br>
+                        <h4 style="font-size: 0.999rem;  font-weight: bold; color: #a90000;">
+                            Overall, how satisfied were you with the level of services provided at Hayyak Lounge?
+                            <br></br>
+                            بشكل عام , ما مدي رضاك عن مستوي الخدمات المقدمة في صالة حياك؟
+                        </h4>
+
+                        <label class="starlabel" for="inputtime" style="font-weight: bold !important;">Food and
+                            beverage? | الطعام والشراب؟ *
+                        </label>
+
+                        <div class="rating">
+                            <input type="radio" id="q1_star5" name="rating1" value="5" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q1_star5" title="Excellent">☆</label>
+                            <input type="radio" id="q1_star4" name="rating1" value="4" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q1_star4" title="Good">☆</label>
+                            <input type="radio" id="q1_star3" name="rating1" value="3" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q1_star3" title="Fair">☆</label>
+                            <input type="radio" id="q1_star2" name="rating1" value="2" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q1_star2" title="Poor">☆</label>
+                            <input type="radio" id="q1_star1" name="rating1" value="1" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q1_star1" title="Very Poor">☆</label>
+                            <div class="clear"></div>
+                        </div>
+                        <br></br>
+
+                        <label class="starlabel" for="inputtime" style="font-weight: bold !important;">Staff Service? |
+                            خدمة الموظفين؟ *
+                        </label>
+
+                        <div class="rating">
+                            <input type="radio" id="q2_star5" name="rating2" value="5" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q2_star5" title="Excellent">☆</label>
+                            <input type="radio" id="q2_star4" name="rating2" value="4" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q2_star4" title="Good">☆</label>
+                            <input type="radio" id="q2_star3" name="rating2" value="3" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q2_star3" title="Fair">☆</label>
+                            <input type="radio" id="q2_star2" name="rating2" value="2" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q2_star2" title="Poor">☆</label>
+                            <input type="radio" id="q2_star1" name="rating2" value="1" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q2_star1" title="Very Poor">☆</label>
+                            <div class="clear"></div>
+                        </div>
+                        <br></br>
+
+                        <label class="starlabel" for="inputtime" style="font-weight: bold !important;">Facilities? |
+                            المرافق؟ *
+                        </label>
+
+                        <div class="rating">
+                            <input type="radio" id="q3_star5" name="rating3" value="5" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q3_star5" title="Excellent">☆</label>
+                            <input type="radio" id="q3_star4" name="rating3" value="4" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q3_star4" title="Good">☆</label>
+                            <input type="radio" id="q3_star3" name="rating3" value="3" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q3_star3" title="Fair">☆</label>
+                            <input type="radio" id="q3_star2" name="rating3" value="2" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q3_star2" title="Poor">☆</label>
+                            <input type="radio" id="q3_star1" name="rating3" value="1" class="radio-btn hide"
+                                   required="1"/>
+                            <label for="q3_star1" title="Very Poor">☆</label>
+                            <div class="clear"></div>
+                        </div>
+                        <br></br>
+
+                        <div>
+                            <label for="dropdown">How do you normally gain entry to our lounge? | كيف تحصل عادة على
+                                الدخول إلى صالتنا؟ *
+                            </label>
+                            <select name="dropdown" id="dropdown" required="1">
+                                <option value="" data-placeholder="true">Please select an option</option>
+                                <option value="airline">Airline</option>
+                                <option value="credit_card">Credit Card</option>
+                                <option value="priority_pass">Priority Pass</option>
+                                <option value="lounge_pass">Lounge Pass</option>
+                                <option value="voucher">Voucher</option>
+                                <option value="walk_in">Walk-in</option>
+                                <option value="diners_club">Diners Club</option>
+                                <option value="others">Others</option>
+
+                            </select>
+                        </div>
+
+                        <br></br>
+                        <br></br>
+
+                        <div class="form-group">
+                            <label id="name-label" for="name" class="control-label"
+                                   style="font-weight: bold !important;">Name | اﻷسم
+                            </label>
+                            <input type="text" name="name" t-att-value="name" id="name"
+                                   class="form-control"
+                                   placeholder="Enter your name"/>
+                        </div>
+                        <div class="form-group">
+                            <label id="email-label" for="email" class="control-label"
+                                   style="font-weight: bold !important;">Email | البريد الإلكتروني
+                            </label>
+                            <input type="email" name="email" t-att-value="email" id="email"
+                                   class="form-control"
+                                   placeholder="Enter your Email"/>
+                        </div>
+                        <div class="form-group">
+                            <label id="mobile-label" for="mobile" class="control-label"
+                                   style="font-weight: bold !important;">Mobile Number | رقم الهاتف المحمول *
+                            </label>
+                            <input type="tel" name="mobile" t-att-value="mobile" id="mobile"
+                                   class="form-control"
+                                   placeholder="Enter your Mobile Number" required="1"/>
+                        </div>
+                        <div class="form-group">
+                            <label id="flight-label" for="flight" class="control-label"
+                                   style="font-weight: bold !important;">Flight Number | رقم الرحلة الجوية
+                            </label>
+                            <input type="text" name="flight" t-att-value="flight" id="flight"
+                                   class="form-control"
+                                   placeholder="Enter your Flight Number"/>
+                        </div>
+
+                        <label style="font-weight: bold !important;">Please tell us what you would like to see improved
+                            in this lounge. <br></br>من فضلك أخبرنا ما الذي ترغب في تحسينه في هذه الصالة.
+                        </label>
+                        <br></br>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                            var myText = document.getElementById('my-text');
+                            var charCount = document.getElementById('char-count');
+                            var maxChars = 150;
+
+                            myText.addEventListener('input', function() {
+                            var text = myText.value;
+                            var remainingChars = maxChars - text.length;
+
+                            charCount.textContent = remainingChars + ' characters remaining';
+
+                            if (remainingChars &lt; 0) {
+                            myText.value = text.substring(0, maxChars);
+                            charCount.textContent = '0 characters remaining';
+                            }
+                            });
+                            });
+                        </script>
+                        <script>
+                            document.getElementById('survey-form').addEventListener('submit', function(event) {
+                            const requiredFields = document.querySelectorAll('input[required], select[required]');
+                            const ratingQuestions = document.querySelectorAll('.rating input[type="radio"]');
+
+                            const placeholderOption = document.querySelector('select[id="dropdown"]
+                            option[data-placeholder="true"]');
+                            placeholderOption.classList.add('hidden');
+
+                            // Check for unanswered rating questions
+                            let unansweredRating = false;
+                            for (const question of ratingQuestions) {
+                            if (!question.checked) {
+                            unansweredRating = true;
+                            break;
+                            }
+                            }
+                            });
+                        </script>
+
+                        <textarea name="text_area" id="my-text" rows="5" placeholder="Type something here.."></textarea>
+                        <p id="char-count">150 characters remaining</p>
+
+                        <button type="submit" class="button">Submit</button>
+
+                    </form>
+
+                    <img style="height: 43px; margin-inline: -9px; width: 429px; margin-top: 27px;"
+                         src="/hayyak_survey/static/src/img/img.png"></img>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
