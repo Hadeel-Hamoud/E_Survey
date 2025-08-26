@@ -16,9 +16,9 @@ This provides businesses with valuable insights into customer satisfaction, busi
 
 
 ##  Installation
-1. Clone this repository into your Odoo **addons** directory
-2. Restart your Odoo service
-3.Activate the module:
+1. Clone this repository into your Odoo **addons** directory.
+2. Restart your Odoo service.
+3. Activate the module:
    Go to Apps in Odoo backend.
    Search for eSurvey.
    Install the module.
