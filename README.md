@@ -1,4 +1,4 @@
-# E_Survey Module for Odoo 14
+# E_Survey Module
 
 ## Overview
 The **E_Survey** module is a custom Odoo 14 application that allows businesses to collect feedback and responses from customers through a rendered web page. 
@@ -38,4 +38,4 @@ This provides businesses with valuable insights into customer satisfaction, busi
 
 
 ## 👨‍💻 
-Developed by Hadeel Hamoud.
+Developed by **Hadeel Hamoud**.
