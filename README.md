@@ -37,5 +37,5 @@ PostgreSQL database
 Python 3.6+
 
 
-## 👨‍💻 Author
+## 👨‍💻 
 Developed by Hadeel Hamoud.
