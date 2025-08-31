@@ -32,9 +32,9 @@ This provides businesses with valuable insights into customer satisfaction, busi
 5. Data can be exported or analyzed for business intelligence.
 
 ## Requirements
-Odoo 14
-PostgreSQL database
-Python 3.6+
+- Odoo 14
+- PostgreSQL database
+- Python 3.6+
 
 
 ## 👨‍💻 
